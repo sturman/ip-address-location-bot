@@ -11,7 +11,7 @@ app.command('start', (ctx) => {
 app.hears(/\/ip (.+)/, (ctx) => {
     let ip = ctx.match[1]
     console.log(ip)
-    rp("https://ipvigilante.com/" + ip).then(
+    rp("https://ipvigilante.com/" + ip + "/full").then(
         function (res) {
             let body = res.body;
             if (body.status === "success") {
