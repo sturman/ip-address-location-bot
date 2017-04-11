@@ -9,8 +9,8 @@
   "author": "Roman Isko",
   "license": "ISC",
   "dependencies": {
-    "minimal-request-promise": "^1.3.0",
     "node-fetch": "^1.6.3",
+    "request-promise": "^4.2.0",
     "telegraf": "^3.6.7"
   }
 }
