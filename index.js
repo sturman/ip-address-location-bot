@@ -8,7 +8,7 @@ app.command('start', (ctx) => {
     ctx.reply('Welcome!')
 })
 
-app.hears(/\/ip (.+)/, (ctx) => {
+app.hears(/^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/, (ctx) => {
     let ip = ctx.match[1]
     console.log(ip)
     rp("https://ipvigilante.com/" + ip + "/full").then(
