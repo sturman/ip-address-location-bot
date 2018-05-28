@@ -5,7 +5,7 @@ const rp  = require('request-promise');
 
 app.command('start', (ctx) => {
     console.log('start', ctx.from);
-    ctx.reply('Welcome!')
+    return ctx.reply('Welcome!')
 })
 
 app.hears(/^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/, (ctx) => {
@@ -23,14 +23,14 @@ app.hears(/^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][
             console.log(res);
             let data = res.data;
             if (res.status === 'success') {
-                ctx.reply('ipv4: ' + data.ipv4 + '\n' +
+                return ctx.reply('ipv4: ' + data.ipv4 + '\n' +
                     'hostname: ' + data.hostname + '\n' +
                     'continent: ' + data.continent_name + '\n' +
                     'country: ' + data.country_name + '\n' +
                     'city: ' + data.city_name)
             }
         }).catch(function (err) {
-        ctx.reply("Error\n" + JSON.stringify(err))
+        return ctx.reply("Error\n" + JSON.stringify(err))
     })
 });
 
