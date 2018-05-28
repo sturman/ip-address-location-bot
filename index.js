@@ -3,12 +3,14 @@ const bot = new Telegraf(process.env.BOT_TOKEN)
 const rp = require('request-promise')
 const ipRegex = require('ip-regex')
 
-bot.command('start', (ctx) => {
+bot.command('start', ctx => {
   console.log('start', ctx.from)
   return ctx.reply('Welcome!')
 })
 
-bot.on('text', (ctx) => {
+bot.command('help', ctx => ctx.reply('Just send me an IP address for which you would like to know a location'))
+
+bot.on('text', ctx => {
   let messageText = ctx.message.text
   if (ipRegex({exact: true}).test(messageText)) {
     let requestOptions = {
