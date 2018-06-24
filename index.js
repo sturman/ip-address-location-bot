@@ -3,6 +3,20 @@ const bot = new Telegraf(process.env.BOT_TOKEN)
 const rp = require('request-promise')
 const ipRegex = require('ip-regex')
 
+const logger = require('logzio-nodejs').createLogger({
+  token: process.env.LOGZIO_TOKEN,
+  host: 'listener.logz.io',
+  type: process.env.NODE_ENV === 'prod' || process.env.NODE_ENV === 'production' ? 'ip_address_location_bot' : 'ip_address_location_bot_dev'
+})
+
+//register logz.io and console loggers
+bot.use((ctx, next) => {
+  return next(ctx).then(() => {
+    console.log(ctx.message)
+    logger.log(ctx.message)
+  })
+})
+
 bot.command('start', ctx => {
   console.log('start', ctx.from)
   return ctx.reply('Welcome!')

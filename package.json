@@ -9,7 +9,7 @@
   "author": "Roman Isko",
   "license": "ISC",
   "dependencies": {
-    "node-fetch": "^2.1.x",
+    "logzio-nodejs": "^0.4.x",
     "request": "^2.87.x",
     "request-promise": "^4.2.x",
     "telegraf": "^3.21.x",
