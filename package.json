@@ -10,9 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "logzio-nodejs": "^0.4.x",
-    "request": "^2.87.x",
+    "request": "^2.88.x",
     "request-promise": "^4.2.x",
-    "telegraf": "^3.21.x",
+    "telegraf": "^3.23.x",
     "ip-regex": "^3.0.x"
   }
 }
