@@ -22,7 +22,7 @@ bot.command('start', ctx => {
   return ctx.reply('Welcome!')
 })
 
-bot.command('help', ctx => ctx.reply('Just send me an IP address for which you would like to know a location'))
+bot.command('help', ctx => ctx.replyWithMarkdown('Just send me an IP address for which you would like to know a location e.g. \n`12.34.43.21`\n`2001:cdba:0000:0000:0000:0000:3257:9652`'))
 
 bot.on('text', ctx => {
   let messageText = ctx.message.text
@@ -47,7 +47,7 @@ bot.on('text', ctx => {
     })
   }
   else {
-    return ctx.reply(`${ctx.message.text} is not an IP address`)
+    return ctx.replyWithMarkdown(`${ctx.message.text} is not an IP address. Please send IP address in correct IPv4 or IPv6 format e.g.\n\`12.34.43.21\`\n\`2001:cdba:0000:0000:0000:0000:3257:9652\``)
   }
 })
 
