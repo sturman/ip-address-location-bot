@@ -2,7 +2,6 @@ service: ip-address-location-telegram-bot
 provider:
   name: aws
   runtime: nodejs12.x
-  profile: sturman
   stage: ${opt:stage, 'development'}
   environment:
     NODE_ENV: ${self:provider.stage}
