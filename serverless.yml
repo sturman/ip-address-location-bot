@@ -1,0 +1,20 @@
+service: ip-address-location-telegram-bot
+provider:
+  name: aws
+  runtime: nodejs12.x
+  profile: sturman
+  stage: ${opt:stage, 'development'}
+  environment:
+    NODE_ENV: ${self:provider.stage}
+
+functions:
+  bot:
+    handler: bot.handler
+    environment:
+      BOT_TOKEN: ${ssm:ip_address_location_telegram_bot_token, env:BOT_TOKEN}
+    events:
+      - http:
+          path: bot
+          method: post
+plugins:
+  - serverless-offline

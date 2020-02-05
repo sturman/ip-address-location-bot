@@ -1,18 +1,30 @@
 {
-  "name": "heroku-telegram-bot",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "ip-address-location-telegram-bot",
+  "version": "2.0.0",
+  "description": "Telegram bot that provides information about IP address",
+  "main": "bot.js",
   "scripts": {
-    "start": "node index.js"
+    "deploy": "sls deploy --stage production",
+    "dev": "sls offline",
+    "localtunnel": "node localtunnel.js"
   },
-  "author": "Roman Isko",
-  "license": "ISC",
+  "keywords": [
+    "telegram",
+    "bot",
+    "network",
+    "tcp",
+    "ip"
+  ],
+  "license": "MIT",
   "dependencies": {
-    "logzio-nodejs": "^0.4.x",
-    "request": "^2.88.x",
-    "request-promise": "^4.2.x",
-    "telegraf": "^3.23.x",
-    "ip-regex": "^3.0.x"
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5",
+    "telegraf": "^3.36.0",
+    "ip-regex": "^4.1.0"
+  },
+  "devDependencies": {
+    "localtunnel": "^2.0.0",
+    "serverless": "^1.62.0",
+    "serverless-offline": "^5.12.1"
   }
 }
