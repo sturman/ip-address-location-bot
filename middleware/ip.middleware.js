@@ -5,20 +5,12 @@ module.exports = (ctx) => {
   let messageText = ctx.message.text
   if (ipRegex({ exact: true }).test(messageText)) {
     let requestOptions = {
-      url: 'https://ipvigilante.com/' + messageText + '/full',
+      url: `http://ipwhois.app/json/${messageText}`,
       json: true
     }
     rp(requestOptions)
       .then((response) => {
-        let data = response.data
-        if (response.status === 'success') {
-          return ctx.reply(`ipv4: ${data.ipv4}
-hostname: ${data.hostname}
-continent: ${data.continent_name}
-country: ${data.country_name}
-city: ${data.city_name}
-time zone: ${data.time_zone}`)
-        }
+        return ctx.reply(JSON.stringify(response, null, 2))
       }).catch((err) => {
       return ctx.replyWithMarkdown('*Something wrong...*\nError details:\n' + JSON.stringify(err))
     })
