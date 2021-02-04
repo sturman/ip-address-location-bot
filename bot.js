@@ -1,6 +1,10 @@
 const { Telegraf } = require('telegraf')
 const { botToken } = require('./config/config')
 
+if (botToken === undefined) {
+  throw new Error('BOT_TOKEN must be provided!')
+}
+
 const bot = new Telegraf(botToken)
 
 const startMiddleware = require('./middleware/start.middleware')
