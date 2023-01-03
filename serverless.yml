@@ -1,7 +1,7 @@
 service: ip-address-location-telegram-bot
 provider:
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs16.x
   stage: ${opt:stage, 'development'}
   environment:
     NODE_ENV: ${self:provider.stage}
