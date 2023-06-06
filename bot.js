@@ -1,5 +1,6 @@
-const { Telegraf } = require('telegraf')
-const { botToken } = require('./config/config')
+import {Telegraf} from "telegraf";
+import {botToken} from "./config/config.js";
+
 
 if (botToken === undefined) {
   throw new Error('BOT_TOKEN must be provided!')
@@ -7,9 +8,9 @@ if (botToken === undefined) {
 
 const bot = new Telegraf(botToken)
 
-const startMiddleware = require('./middleware/start.middleware')
-const helpMiddleware = require('./middleware/help.middleware')
-const ipMiddleware = require('./middleware/ip.middleware')
+import startMiddleware from './middleware/start.middleware.js'
+import helpMiddleware from './middleware/help.middleware.js'
+import ipMiddleware from './middleware/ip.middleware.js'
 
 bot.start(startMiddleware)
 bot.help(helpMiddleware)
@@ -19,7 +20,7 @@ bot.catch((err, ctx) => {
   console.log(`Ooops, encountered an error for ${ctx.updateType}`, err)
 })
 
-exports.handler = (event, context, callback) => {
+export const handler = (event, context, callback) => {
   console.log(event.body)
   const body = JSON.parse(event.body) // get data passed to us
 

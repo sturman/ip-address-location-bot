@@ -1,7 +1,11 @@
-service: ip-address-location-telegram-bot
+service: ip-addr-location-tg-bot
+frameworkVersion: '3'
+package:
+  excludeDevDependencies: true
 provider:
   name: aws
-  runtime: nodejs16.x
+  runtime: nodejs18.x
+  region: eu-central-1
   stage: ${opt:stage, 'development'}
   environment:
     NODE_ENV: ${self:provider.stage}
@@ -10,10 +14,10 @@ functions:
   bot:
     handler: bot.handler
     environment:
-      BOT_TOKEN: ${ssm:ip_address_location_telegram_bot_token, env:BOT_TOKEN}
+      BOT_TOKEN: ${env:BOT_TOKEN, ssm:ip_address_location_telegram_bot_token}
     events:
       - http:
-          path: bot
+          path: '/bot'
           method: post
 plugins:
   - serverless-offline
