@@ -48,7 +48,7 @@ export class IpAddressLocationBotStack extends cdk.Stack {
       height: 18,
       queryLines: [
         'fields @timestamp, level, ' +
-          'body.message.chat.first_name as first_name, body.message.chat.last_name as last_name, body.message.text as text',
+          'body.message.chat.first_name as first_name, body.message.chat.last_name as last_name, body.message.chat.username as username, body.message.text as text',
         'filter @message like /update_id/',
       ],
     });
