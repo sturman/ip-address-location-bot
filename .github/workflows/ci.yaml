@@ -1,0 +1,24 @@
+name: CI
+
+on: pull_request
+
+jobs:
+  ci:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - name: Install dependencies
+        run: npm ci
+      - name: Type check
+        run: npm run ts-check
+      - name: Prettier
+        run: npm run prettier:check:ci
+      - name: ESLint
+        run: npm run eslint
+      - name: Test
+        run: npm run test

@@ -1,31 +1,52 @@
 {
-  "name": "ip-address-location-telegram-bot",
-  "version": "4.1.0",
-  "description": "Telegram bot that provides information about IP address",
-  "main": "bot.js",
-  "type": "module",
-  "scripts": {
-    "deploy": "sls deploy --stage production",
-    "deploy-development": "sls deploy",
-    "dev": "sls offline",
-    "localtunnel": "node localtunnel.js"
+  "name": "ip-address-location-bot",
+  "version": "1.0.0",
+  "bin": {
+    "ip-address-location-bot": "bin/ip-address-location-bot.js"
   },
-  "keywords": [
-    "telegram",
-    "bot",
-    "network",
-    "tcp",
-    "ip"
-  ],
-  "license": "MIT",
-  "dependencies": {
-    "ip-regex": "^4.3.0",
-    "node-fetch": "^3.3.1",
-    "telegraf": "^4.12.2"
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "ts-check": "tsc --noEmit",
+    "prettier:check:ci": "prettier --check .",
+    "prettier:format": "prettier --write .",
+    "eslint": "eslint .",
+    "cdk": "cdk",
+    "cdk:synth": "cdk synth",
+    "cdk:diff": "cdk diff",
+    "cdk:deploy": "cdk deploy --all --require-approval never",
+    "semantic-release": "semantic-release"
   },
   "devDependencies": {
-    "ngrok": "^5.0.0-beta.2",
-    "serverless": "^3.32.2",
-    "serverless-offline": "^12.0.4"
-  }
+    "@eslint/js": "^9.11.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/jest": "^29.5.13",
+    "@types/node": "20.16.10",
+    "aws-cdk": "2.160.0",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "esbuild": "^0.24.0",
+    "eslint": "^9.11.1",
+    "eslint-config-prettier": "^9.1.0",
+    "jest": "^29.7.0",
+    "prettier": "3.3.3",
+    "semantic-release": "^24.1.2",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.8.0"
+  },
+  "dependencies": {
+    "@aws-lambda-powertools/logger": "^2.8.0",
+    "@types/aws-lambda": "^8.10.145",
+    "aws-cdk-lib": "2.160.0",
+    "axios": "^1.7.7",
+    "constructs": "^10.3.0",
+    "source-map-support": "^0.5.21",
+    "telegraf": "^4.16.3"
+  },
+  "workspaces": [
+    "functions/ip-address-location-bot"
+  ]
 }

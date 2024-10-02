@@ -1,0 +1,35 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write
+  contents: write # to be able to publish a GitHub release
+
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    environment: prod
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - name: Assume role
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: eu-central-1
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+      - name: Install dependencies
+        run: npm ci
+      - name: Deploy prod
+        run: npm run cdk:deploy
+      - name: Publish release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run semantic-release

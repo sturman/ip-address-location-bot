@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": ["lib", "bin", "functions/**/*.ts", "test/**/*.ts", "__common__/**/*.ts"]
+}
