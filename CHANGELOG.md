@@ -1,3 +1,9 @@
+## [1.0.1](https://github.com/sturman/ip-address-location-bot/compare/v1.0.0...v1.0.1) (2024-10-02)
+
+### Bug Fixes
+
+* add IpInfo type ([ddce606](https://github.com/sturman/ip-address-location-bot/commit/ddce6067c2bf035f787da184299f43b9d8901355))
+
 ## 1.0.0 (2024-10-02)
 
 ### ⚠ BREAKING CHANGES
