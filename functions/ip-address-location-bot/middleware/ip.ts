@@ -3,6 +3,7 @@ import { Message } from '@telegraf/types/message';
 import { isIP } from 'node:net';
 import axios from 'axios';
 import { code, fmt, pre } from 'telegraf/format';
+import { IpInfo } from '../types/ip.info';
 
 export const ip = async (ctx: Context) => {
   const message = ctx.message as Message.TextMessage;
@@ -20,5 +21,5 @@ export const ip = async (ctx: Context) => {
 
 const fetchIpInfo = async (ipAddress: string) => {
   const response = await axios.get(`https://ipwhois.app/json/${ipAddress}`);
-  return response.data;
+  return response.data as IpInfo;
 };
