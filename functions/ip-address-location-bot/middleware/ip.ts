@@ -12,7 +12,9 @@ export const ip = async (ctx: Context) => {
     const ipInfoText = JSON.stringify(ipInfo, null, 2);
     await ctx.reply(pre('json')`${ipInfoText}`, { reply_parameters: { message_id: message.message_id } });
   } else {
-    await ctx.reply(fmt`${code(text)} is not a valid IP address`, { reply_parameters: { message_id: message.message_id } });
+    await ctx.reply(fmt`${code(text)} is not a valid IP address`, {
+      reply_parameters: { message_id: message.message_id },
+    });
   }
 };
 
