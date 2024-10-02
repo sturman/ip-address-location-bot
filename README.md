@@ -3,6 +3,6 @@ Running on [AWS Lambda](https://aws.amazon.com/lambda/)
 
 Developed with
  - [telegraf.js](https://telegraf.js.org/#/)
- - [serverless](https://serverless.com/)
+ - [AWS CDK](https://github.com/aws/aws-cdk)
  
 https://t.me/ipaddressbot
