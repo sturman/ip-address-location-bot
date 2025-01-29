@@ -1,3 +1,9 @@
+## [1.2.0](https://github.com/sturman/ip-address-location-bot/compare/v1.1.0...v1.2.0) (2025-01-29)
+
+### Features
+
+* add unique users widgets ([#42](https://github.com/sturman/ip-address-location-bot/issues/42)) ([60cae3c](https://github.com/sturman/ip-address-location-bot/commit/60cae3cb8dacb286b7c027cdc17090f0555bde10))
+
 ## [1.1.0](https://github.com/sturman/ip-address-location-bot/compare/v1.0.2...v1.1.0) (2025-01-29)
 
 ### Features
