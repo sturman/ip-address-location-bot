@@ -53,5 +53,13 @@ export class IpAddressLocationBotStack extends cdk.Stack {
       ],
     });
     dashboard.addWidgets(logQueryWidget);
+    const uniqueUsersWidget = new LogQueryWidget({
+      logGroupNames: [nodeJsFunction.logGroup.logGroupName],
+      view: LogQueryVisualizationType.TABLE,
+      width: 4,
+      height: 4,
+      queryLines: ['stats count_distinct(body.message.from.id) as unique_users'],
+    });
+    dashboard.addWidgets(uniqueUsersWidget);
   }
 }
