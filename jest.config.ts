@@ -14,6 +14,7 @@ const config: Config = {
   coverageDirectory: 'coverage',
   clearMocks: true,
   coverageReporters: ['cobertura', 'text', 'lcov', 'html'],
+  reporters: [['github-actions', { silent: false }], 'summary'],
 };
 
 export default config;
