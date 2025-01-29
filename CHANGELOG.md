@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/sturman/ip-address-location-bot/compare/v1.0.2...v1.1.0) (2025-01-29)
+
+### Features
+
+* upgrade to Node.js 22 runtime. Add tests ([#41](https://github.com/sturman/ip-address-location-bot/issues/41)) ([5bc1256](https://github.com/sturman/ip-address-location-bot/commit/5bc125603aaa1a94f533658bf8cecba24c76c442))
+
 ## [1.0.2](https://github.com/sturman/ip-address-location-bot/compare/v1.0.1...v1.0.2) (2024-10-02)
 
 ### Bug Fixes
