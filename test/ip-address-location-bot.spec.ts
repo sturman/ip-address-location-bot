@@ -1,6 +1,7 @@
 import * as cdk from 'aws-cdk-lib';
 import { Template } from 'aws-cdk-lib/assertions';
 import { IpAddressLocationBotStack } from '../lib/ip-address-location-bot-stack';
+import { FunctionUrlAuthType } from 'aws-cdk-lib/aws-lambda';
 
 let template: Template;
 
@@ -16,7 +17,9 @@ describe('IpAddressLocationBotStack', () => {
   });
 
   it('should create Lambda Function URL', () => {
-    template.hasResource('AWS::Lambda::Url', {});
+    template.hasResourceProperties('AWS::Lambda::Url', {
+      AuthType: FunctionUrlAuthType.NONE,
+    });
   });
 
   it('should create SSM parameter', () => {
