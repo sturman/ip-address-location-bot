@@ -16,7 +16,7 @@ export class IpAddressLocationBotStack extends cdk.Stack {
 
     const nodeJsFunctionProps: NodejsFunctionProps = {
       functionName: `ip-address-location-bot`,
-      runtime: lambda.Runtime.NODEJS_20_X,
+      runtime: lambda.Runtime.NODEJS_22_X,
       handler: 'index.handler',
       entry: path.join(__dirname, `/../functions/ip-address-location-bot/index.ts`),
       environment: {
