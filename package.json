@@ -41,7 +41,7 @@
     "@aws-lambda-powertools/logger": "^2.13.1",
     "@types/aws-lambda": "^8.10.147",
     "aws-cdk-lib": "2.189.1",
-    "axios": "^1.8.2",
+    "axios": "^1.12.0",
     "constructs": "^10.4.2",
     "source-map-support": "^0.5.21",
     "telegraf": "^4.16.3"
