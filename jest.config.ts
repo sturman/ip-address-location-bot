@@ -1,5 +1,4 @@
 import type { Config } from 'jest';
-import { workspaces } from './package.json';
 
 const config: Config = {
   testEnvironment: 'node',
@@ -8,7 +7,7 @@ const config: Config = {
   },
   moduleFileExtensions: ['ts', 'js', 'json'],
   testRegex: '.*\\.spec\\.ts$',
-  collectCoverageFrom: workspaces.map(p => `${p}/**/src/**/*.ts`),
+  collectCoverageFrom: ['./**/src/**/*.ts'],
   passWithNoTests: true,
   coveragePathIgnorePatterns: ['jest.config.ts', '.spec.ts$'],
   coverageDirectory: 'coverage',
