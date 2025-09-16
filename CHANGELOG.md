@@ -1,3 +1,11 @@
+## [1.2.1](https://github.com/sturman/ip-address-location-bot/compare/v1.2.0...v1.2.1) (2025-09-16)
+
+### Bug Fixes
+
+* change collect coverage pattern ([d7385ef](https://github.com/sturman/ip-address-location-bot/commit/d7385efa51a190895bdbe780253577289e1582ee))
+* enable esModuleInterop in TypeScript configuration ([174ba87](https://github.com/sturman/ip-address-location-bot/commit/174ba87b0f80df1b6d410440db21ca5e7842b522))
+* update AWS CDK feature flags ([55db7bb](https://github.com/sturman/ip-address-location-bot/commit/55db7bbfe34630fe23995fa2320e860dc7a9028c))
+
 ## [1.2.0](https://github.com/sturman/ip-address-location-bot/compare/v1.1.0...v1.2.0) (2025-01-29)
 
 ### Features
