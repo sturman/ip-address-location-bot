@@ -1,3 +1,9 @@
+## [1.3.0](https://github.com/sturman/ip-address-location-bot/compare/v1.2.1...v1.3.0) (2025-09-22)
+
+### Features
+
+* create dependabot.yml ([9719b31](https://github.com/sturman/ip-address-location-bot/commit/9719b311a5b86d35428723693285f5444f4f00df))
+
 ## [1.2.1](https://github.com/sturman/ip-address-location-bot/compare/v1.2.0...v1.2.1) (2025-09-16)
 
 ### Bug Fixes
