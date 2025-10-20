@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@aws-lambda-powertools/logger": "^2.27.0",
-    "@types/aws-lambda": "^8.10.155",
+    "@types/aws-lambda": "^8.10.156",
     "aws-cdk-lib": "2.219.0",
     "axios": "^1.12.2",
     "constructs": "^10.4.2",
