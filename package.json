@@ -40,7 +40,7 @@
   "dependencies": {
     "@aws-lambda-powertools/logger": "^2.33.0",
     "@types/aws-lambda": "^8.10.161",
-    "aws-cdk-lib": "2.253.1",
+    "aws-cdk-lib": "2.256.1",
     "axios": "^1.16.0",
     "constructs": "^10.6.0",
     "source-map-support": "^0.5.21",
