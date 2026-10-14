@@ -1,3 +1,13 @@
+## [1.4.0](https://github.com/sturman/ip-address-location-bot/compare/v1.3.1...v1.4.0) (2026-10-14)
+
+### Features
+
+* upgrade Lambda runtime to Node.js 24 ([1b8c5e5](https://github.com/sturman/ip-address-location-bot/commit/1b8c5e5b05ab10e0c250d9200b257bf80aa81ad8))
+
+### Bug Fixes
+
+* pin conventionalcommits preset to v9 to restore releases ([744c39d](https://github.com/sturman/ip-address-location-bot/commit/744c39d2c83ed64aafefb63a172a813cea5fbb4a))
+
 ## [1.3.1](https://github.com/sturman/ip-address-location-bot/compare/v1.3.0...v1.3.1) (2026-07-14)
 
 ## [1.3.0](https://github.com/sturman/ip-address-location-bot/compare/v1.2.1...v1.3.0) (2025-09-22)
