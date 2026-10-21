@@ -27,7 +27,7 @@
     "aws-cdk": "2.1144.0",
     "conventional-changelog-conventionalcommits": "9.3.1",
     "esbuild": "^0.28.2",
-    "eslint": "^10.11.0",
+    "eslint": "^10.13.0",
     "eslint-config-prettier": "^10.1.8",
     "jest": "^30.5.2",
     "prettier": "3.9.10",
