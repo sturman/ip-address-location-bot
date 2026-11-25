@@ -1,3 +1,9 @@
+## [1.5.0](https://github.com/sturman/ip-address-location-bot/compare/v1.4.0...v1.5.0) (2026-11-25)
+
+### Features
+
+* **lambda:** run the bot on the Node.js 26 runtime ([2bef50a](https://github.com/sturman/ip-address-location-bot/commit/2bef50af597c16e84a4238468d864663c10be5e7))
+
 ## [1.4.0](https://github.com/sturman/ip-address-location-bot/compare/v1.3.1...v1.4.0) (2026-10-14)
 
 ### Features
